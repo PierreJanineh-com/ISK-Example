@@ -6,19 +6,37 @@
 //
 
 import SwiftUI
+import InfinityScrollKit
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    
+    private var arr: [String] = []
+    
+    init() {
+        // Dummy array
+        for i in 0...500 {
+            self.arr.append("Cell #\(i)")
         }
-        .padding()
+    }
+    
+    var body: some View {
+        InfiniteScrollView/*<String, Text>*/ (
+            arr: arr,
+            options: .init(countPerPage: 5)
+        ) { item in
+            Text(item)
+        }
+        // You can also use ScrollView modifiers directly
+//        .scrollIndicators(.hidden)
     }
 }
 
 #Preview {
     ContentView()
+}
+
+extension String: @retroactive Identifiable {
+    public var id: String {
+        self
+    }
 }
