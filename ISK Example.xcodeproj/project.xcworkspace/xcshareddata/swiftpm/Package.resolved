@@ -1,0 +1,15 @@
+{
+  "originHash" : "55db1dd7471597d31498f598948a1174cf9efafd7946ae1bfc7472d9c22274b7",
+  "pins" : [
+    {
+      "identity" : "infinityscrollkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PierreJanineh-com/InfinityScrollKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2b3f24cd829afe26d820f7ea5958e01c98fa5ae1"
+      }
+    }
+  ],
+  "version" : 3
+}
