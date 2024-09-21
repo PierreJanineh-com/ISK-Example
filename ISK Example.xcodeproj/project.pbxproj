@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873DB4322C9F07BE00FE8EE4 /* BasicImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873DB4312C9F07BE00FE8EE4 /* BasicImplementation.swift */; };
 		87A2C9772C983C35005E8921 /* ISK_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2C9762C983C35005E8921 /* ISK_ExampleApp.swift */; };
 		87A2C9792C983C35005E8921 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2C9782C983C35005E8921 /* ContentView.swift */; };
 		87A2C97B2C983C36005E8921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A2C97A2C983C36005E8921 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		873DB4312C9F07BE00FE8EE4 /* BasicImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImplementation.swift; sourceTree = "<group>"; };
 		87A2C9732C983C35005E8921 /* ISK Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISK Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A2C9762C983C35005E8921 /* ISK_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISK_ExampleApp.swift; sourceTree = "<group>"; };
 		87A2C9782C983C35005E8921 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		873DB4302C9F076E00FE8EE4 /* InfiniteScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				873DB4312C9F07BE00FE8EE4 /* BasicImplementation.swift */,
+			);
+			path = InfiniteScrollView;
+			sourceTree = "<group>";
+		};
 		87A2C96A2C983C35005E8921 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 			children = (
 				87A2C9762C983C35005E8921 /* ISK_ExampleApp.swift */,
 				87A2C9782C983C35005E8921 /* ContentView.swift */,
+				873DB4302C9F076E00FE8EE4 /* InfiniteScrollView */,
 				87A2C97A2C983C36005E8921 /* Assets.xcassets */,
 				87A2C97C2C983C36005E8921 /* ISK_Example.entitlements */,
 				87A2C97D2C983C36005E8921 /* Preview Content */,
@@ -148,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A2C9792C983C35005E8921 /* ContentView.swift in Sources */,
+				873DB4322C9F07BE00FE8EE4 /* BasicImplementation.swift in Sources */,
 				87A2C9772C983C35005E8921 /* ISK_ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

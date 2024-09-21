@@ -20,14 +20,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        InfiniteScrollView/*<String, Text>*/ (
-            arr: arr,
-            options: .init(countPerPage: 5)
-        ) { item in
-            Text(item)
-        }
-        // You can also use ScrollView modifiers directly
-//        .scrollIndicators(.hidden)
+        BasicImplementation(arr: arr)
     }
 }
 
