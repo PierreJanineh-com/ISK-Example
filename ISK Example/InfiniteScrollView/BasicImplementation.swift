@@ -12,7 +12,7 @@ struct BasicImplementation: View {
     let arr: [String]
     
     var body: some View {
-        InfiniteScrollView/*<String, Text>*/ (
+        InfiniteScrollView/*<String, Text, EmptyView, EmptyView>*/(
             arr: arr,
             options: .init(countPerPage: 5)
         ) { item in

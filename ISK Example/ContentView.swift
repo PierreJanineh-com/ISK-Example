@@ -20,7 +20,15 @@ struct ContentView: View {
     }
     
     var body: some View {
-        BasicImplementation(arr: arr)
+        VStack {
+            Text("Basic implementation")
+            BasicImplementation(arr: arr)
+            
+            Divider()
+            
+            Text("Customized implementation")
+            CustomizedImplementation()
+        }
     }
 }
 
