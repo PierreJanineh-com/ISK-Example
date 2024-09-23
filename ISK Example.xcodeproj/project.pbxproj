@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		873DB4322C9F07BE00FE8EE4 /* BasicImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873DB4312C9F07BE00FE8EE4 /* BasicImplementation.swift */; };
 		873DB4342C9F087900FE8EE4 /* CustomizedImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873DB4332C9F087900FE8EE4 /* CustomizedImplementation.swift */; };
+		879284822CA0141A00AE0C9A /* InfinityScrollKit in Frameworks */ = {isa = PBXBuildFile; productRef = 879284812CA0141A00AE0C9A /* InfinityScrollKit */; };
 		87A2C9772C983C35005E8921 /* ISK_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2C9762C983C35005E8921 /* ISK_ExampleApp.swift */; };
 		87A2C9792C983C35005E8921 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2C9782C983C35005E8921 /* ContentView.swift */; };
 		87A2C97B2C983C36005E8921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A2C97A2C983C36005E8921 /* Assets.xcassets */; };
 		87A2C97F2C983C36005E8921 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A2C97E2C983C36005E8921 /* Preview Assets.xcassets */; };
-		87A2C9892C984AA2005E8921 /* InfinityScrollKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87A2C9882C984AA2005E8921 /* InfinityScrollKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87A2C9892C984AA2005E8921 /* InfinityScrollKit in Frameworks */,
+				879284822CA0141A00AE0C9A /* InfinityScrollKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 			);
 			name = "ISK Example";
 			packageProductDependencies = (
-				87A2C9882C984AA2005E8921 /* InfinityScrollKit */,
+				879284812CA0141A00AE0C9A /* InfinityScrollKit */,
 			);
 			productName = "ISK Example";
 			productReference = 87A2C9732C983C35005E8921 /* ISK Example.app */;
@@ -133,7 +133,7 @@
 			);
 			mainGroup = 87A2C96A2C983C35005E8921;
 			packageReferences = (
-				87A2C9872C984AA2005E8921 /* XCRemoteSwiftPackageReference "InfinityScrollKit" */,
+				879284802CA0141A00AE0C9A /* XCRemoteSwiftPackageReference "InfinityScrollKit" */,
 			);
 			productRefGroup = 87A2C9742C983C35005E8921 /* Products */;
 			projectDirPath = "";
@@ -385,20 +385,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		87A2C9872C984AA2005E8921 /* XCRemoteSwiftPackageReference "InfinityScrollKit" */ = {
+		879284802CA0141A00AE0C9A /* XCRemoteSwiftPackageReference "InfinityScrollKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/PierreJanineh-com/InfinityScrollKit";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		87A2C9882C984AA2005E8921 /* InfinityScrollKit */ = {
+		879284812CA0141A00AE0C9A /* InfinityScrollKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 87A2C9872C984AA2005E8921 /* XCRemoteSwiftPackageReference "InfinityScrollKit" */;
+			package = 879284802CA0141A00AE0C9A /* XCRemoteSwiftPackageReference "InfinityScrollKit" */;
 			productName = InfinityScrollKit;
 		};
 /* End XCSwiftPackageProductDependency section */

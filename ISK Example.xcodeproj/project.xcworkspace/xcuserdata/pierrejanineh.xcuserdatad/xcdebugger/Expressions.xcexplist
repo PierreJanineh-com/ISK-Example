@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "InfiniteScrollView.addMoreItemsIfAvailable():InfinityScrollKit.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.arr.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "InfiniteScrollView.displayedItems.getter:InfinityScrollKit.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr.isEmpty">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

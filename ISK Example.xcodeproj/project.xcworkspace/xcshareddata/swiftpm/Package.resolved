@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/PierreJanineh-com/InfinityScrollKit",
       "state" : {
-        "branch" : "main",
-        "revision" : "2b3f24cd829afe26d820f7ea5958e01c98fa5ae1"
+        "revision" : "9105838047262dff0c2573bba3a7c40d93f10ff8",
+        "version" : "1.0.2"
       }
     }
   ],
