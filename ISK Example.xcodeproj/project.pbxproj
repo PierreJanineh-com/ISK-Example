@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		873DB4312C9F07BE00FE8EE4 /* BasicImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImplementation.swift; sourceTree = "<group>"; };
 		873DB4332C9F087900FE8EE4 /* CustomizedImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedImplementation.swift; sourceTree = "<group>"; };
+		8792847F2CA0098A00AE0C9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		87A2C9732C983C35005E8921 /* ISK Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISK Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A2C9762C983C35005E8921 /* ISK_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISK_ExampleApp.swift; sourceTree = "<group>"; };
 		87A2C9782C983C35005E8921 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		87A2C96A2C983C35005E8921 = {
 			isa = PBXGroup;
 			children = (
+				8792847F2CA0098A00AE0C9A /* README.md */,
 				87A2C9752C983C35005E8921 /* ISK Example */,
 				87A2C9742C983C35005E8921 /* Products */,
 			);
