@@ -25,17 +25,20 @@ struct CustomizedImplementation: View {
     
     private var options: Options<String> {
         .init(
+            orientation: .horizontal,
             countPerPage: 2,
-            onPageLoad: {
-                // Simulate an http request
-                try? await Task.sleep(nanoseconds: 5 * 1_000_000_000)
-                
-                for i in arr.count...arr.count + 10 {
-                    arr.append("Cell #\(i)")
-                }
-                return arr
-            },
-            concatMode: .auto //.auto for automatically adding pages to the array instead of passing the full array everytime.
+            paginationOptions: .init(
+                onPageLoad: {
+                    // Simulate an http request
+                    try? await Task.sleep(nanoseconds: 5 * 1_000_000_000)
+                    
+                    for i in arr.count...arr.count + 10 {
+                        arr.append("Cell #\(i)")
+                    }
+                    return arr
+                },
+                concatMode: .auto //.auto for automatically adding pages to the array instead of passing the full array everytime.
+            )
         )
     }
     
