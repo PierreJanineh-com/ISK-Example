@@ -28,6 +28,7 @@ struct CustomizedImplementation: View {
             orientation: .horizontal,
             countPerPage: 2,
             paginationOptions: .init(
+                concatMode: .auto, //.auto for automatically adding pages to the array instead of passing the full array everytime.
                 onPageLoad: {
                     // Simulate an http request
                     try? await Task.sleep(nanoseconds: 5 * 1_000_000_000)
@@ -37,7 +38,15 @@ struct CustomizedImplementation: View {
                     }
                     return arr
                 },
-                concatMode: .auto //.auto for automatically adding pages to the array instead of passing the full array everytime.
+                onRefresh: {
+                    // Simulate an http request
+                    try? await Task.sleep(nanoseconds: 5 * 1_000_000_000)
+                    
+                    for i in 0...25 {
+                        arr.append("Cell #\(i)")
+                    }
+                    return arr
+                }
             )
         )
     }
