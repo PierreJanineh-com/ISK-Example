@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		873DB4322C9F07BE00FE8EE4 /* BasicImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873DB4312C9F07BE00FE8EE4 /* BasicImplementation.swift */; };
 		873DB4342C9F087900FE8EE4 /* CustomizedImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873DB4332C9F087900FE8EE4 /* CustomizedImplementation.swift */; };
-		879284822CA0141A00AE0C9A /* InfinityScrollKit in Frameworks */ = {isa = PBXBuildFile; productRef = 879284812CA0141A00AE0C9A /* InfinityScrollKit */; };
+		876BF0622DC634DE009DCD64 /* InfinityScrollKit in Frameworks */ = {isa = PBXBuildFile; productRef = 876BF0612DC634DE009DCD64 /* InfinityScrollKit */; };
+		876BF0652DC634F7009DCD64 /* InfinityScrollKit in Frameworks */ = {isa = PBXBuildFile; productRef = 876BF0642DC634F7009DCD64 /* InfinityScrollKit */; };
+		876BF0682DC64F6D009DCD64 /* UIKitImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BF0672DC64F44009DCD64 /* UIKitImplementation.swift */; };
+		876BF06B2DCA7EA5009DCD64 /* AppKitImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BF06A2DCA7E95009DCD64 /* AppKitImplementation.swift */; };
+		879FD9842DCAB1DA00813562 /* InfinityScrollKit in Frameworks */ = {isa = PBXBuildFile; productRef = 879FD9832DCAB1DA00813562 /* InfinityScrollKit */; };
 		87A2C9772C983C35005E8921 /* ISK_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2C9762C983C35005E8921 /* ISK_ExampleApp.swift */; };
 		87A2C9792C983C35005E8921 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2C9782C983C35005E8921 /* ContentView.swift */; };
 		87A2C97B2C983C36005E8921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A2C97A2C983C36005E8921 /* Assets.xcassets */; };
@@ -19,6 +23,8 @@
 /* Begin PBXFileReference section */
 		873DB4312C9F07BE00FE8EE4 /* BasicImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImplementation.swift; sourceTree = "<group>"; };
 		873DB4332C9F087900FE8EE4 /* CustomizedImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedImplementation.swift; sourceTree = "<group>"; };
+		876BF0672DC64F44009DCD64 /* UIKitImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitImplementation.swift; sourceTree = "<group>"; };
+		876BF06A2DCA7E95009DCD64 /* AppKitImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKitImplementation.swift; sourceTree = "<group>"; };
 		8792847F2CA0098A00AE0C9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		87A2C9732C983C35005E8921 /* ISK Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISK Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A2C9762C983C35005E8921 /* ISK_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISK_ExampleApp.swift; sourceTree = "<group>"; };
@@ -33,7 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879284822CA0141A00AE0C9A /* InfinityScrollKit in Frameworks */,
+				876BF0652DC634F7009DCD64 /* InfinityScrollKit in Frameworks */,
+				876BF0622DC634DE009DCD64 /* InfinityScrollKit in Frameworks */,
+				879FD9842DCAB1DA00813562 /* InfinityScrollKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,22 @@
 				873DB4332C9F087900FE8EE4 /* CustomizedImplementation.swift */,
 			);
 			path = InfiniteScrollView;
+			sourceTree = "<group>";
+		};
+		876BF0662DC64F31009DCD64 /* UIInfiniteScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				876BF0672DC64F44009DCD64 /* UIKitImplementation.swift */,
+			);
+			path = UIInfiniteScrollView;
+			sourceTree = "<group>";
+		};
+		876BF0692DCA7E82009DCD64 /* NSInfiniteScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				876BF06A2DCA7E95009DCD64 /* AppKitImplementation.swift */,
+			);
+			path = NSInfiniteScrollView;
 			sourceTree = "<group>";
 		};
 		87A2C96A2C983C35005E8921 = {
@@ -72,6 +96,8 @@
 				87A2C9762C983C35005E8921 /* ISK_ExampleApp.swift */,
 				87A2C9782C983C35005E8921 /* ContentView.swift */,
 				873DB4302C9F076E00FE8EE4 /* InfiniteScrollView */,
+				876BF0662DC64F31009DCD64 /* UIInfiniteScrollView */,
+				876BF0692DCA7E82009DCD64 /* NSInfiniteScrollView */,
 				87A2C97A2C983C36005E8921 /* Assets.xcassets */,
 				87A2C97C2C983C36005E8921 /* ISK_Example.entitlements */,
 				87A2C97D2C983C36005E8921 /* Preview Content */,
@@ -104,7 +130,9 @@
 			);
 			name = "ISK Example";
 			packageProductDependencies = (
-				879284812CA0141A00AE0C9A /* InfinityScrollKit */,
+				876BF0612DC634DE009DCD64 /* InfinityScrollKit */,
+				876BF0642DC634F7009DCD64 /* InfinityScrollKit */,
+				879FD9832DCAB1DA00813562 /* InfinityScrollKit */,
 			);
 			productName = "ISK Example";
 			productReference = 87A2C9732C983C35005E8921 /* ISK Example.app */;
@@ -135,7 +163,7 @@
 			);
 			mainGroup = 87A2C96A2C983C35005E8921;
 			packageReferences = (
-				879284802CA0141A00AE0C9A /* XCRemoteSwiftPackageReference "InfinityScrollKit" */,
+				879FD9822DCAB1DA00813562 /* XCRemoteSwiftPackageReference "InfinityScrollKit" */,
 			);
 			productRefGroup = 87A2C9742C983C35005E8921 /* Products */;
 			projectDirPath = "";
@@ -164,8 +192,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A2C9792C983C35005E8921 /* ContentView.swift in Sources */,
+				876BF0682DC64F6D009DCD64 /* UIKitImplementation.swift in Sources */,
 				873DB4322C9F07BE00FE8EE4 /* BasicImplementation.swift in Sources */,
 				873DB4342C9F087900FE8EE4 /* CustomizedImplementation.swift in Sources */,
+				876BF06B2DCA7EA5009DCD64 /* AppKitImplementation.swift in Sources */,
 				87A2C9772C983C35005E8921 /* ISK_ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ISK Example/ISK_Example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ISK Example/Preview Content\"";
 				DEVELOPMENT_TEAM = D652685959;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -310,7 +340,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -318,10 +348,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pierrejanineh.ISK-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -332,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ISK Example/ISK_Example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ISK Example/Preview Content\"";
 				DEVELOPMENT_TEAM = D652685959;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -348,7 +379,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -356,10 +387,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pierrejanineh.ISK-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};
@@ -387,20 +419,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		879284802CA0141A00AE0C9A /* XCRemoteSwiftPackageReference "InfinityScrollKit" */ = {
+		879FD9822DCAB1DA00813562 /* XCRemoteSwiftPackageReference "InfinityScrollKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/PierreJanineh-com/InfinityScrollKit";
+			repositoryURL = "https://github.com/PierreJanineh-com/InfinityScrollKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 1.0.6;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		879284812CA0141A00AE0C9A /* InfinityScrollKit */ = {
+		876BF0612DC634DE009DCD64 /* InfinityScrollKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 879284802CA0141A00AE0C9A /* XCRemoteSwiftPackageReference "InfinityScrollKit" */;
+			productName = InfinityScrollKit;
+		};
+		876BF0642DC634F7009DCD64 /* InfinityScrollKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InfinityScrollKit;
+		};
+		879FD9832DCAB1DA00813562 /* InfinityScrollKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 879FD9822DCAB1DA00813562 /* XCRemoteSwiftPackageReference "InfinityScrollKit" */;
 			productName = InfinityScrollKit;
 		};
 /* End XCSwiftPackageProductDependency section */
