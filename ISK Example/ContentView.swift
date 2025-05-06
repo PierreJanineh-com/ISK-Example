@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import InfinityScrollKit
 
 struct ContentView: View {
     
@@ -21,23 +20,31 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Basic implementation")
+            TitleText("Basic implementation")
             BasicImplementation(arr: arr)
             
             Divider()
             
-            Text("Customized implementation")
+            TitleText("Customized implementation")
             CustomizedImplementation()
+			
+			// Uncomment to test on iOS
+//			TitleText("UIKit implementation")
+//			UIKitImplementation()
+			
+			// Uncomment to test on macOS
+//			TitleText("AppKit implementation")
+//			AppKitImplementation()
         }
     }
+	
+	private func TitleText(_ string: String) -> Text {
+		Text(string)
+			.font(.title3)
+			.fontWeight(.medium)
+	}
 }
 
 #Preview {
     ContentView()
-}
-
-extension String: @retroactive Identifiable {
-    public var id: String {
-        self
-    }
 }

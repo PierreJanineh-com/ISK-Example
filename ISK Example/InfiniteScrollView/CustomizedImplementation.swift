@@ -9,12 +9,12 @@ import SwiftUI
 import InfinityScrollKit
 
 struct CustomizedImplementation: View {
-    @State private var arr: [String] = []
+    @State private var arr: [Person] = []
     @State private var isLoading: Bool = false
     
     var body: some View {
-        InfiniteScrollView/*<String, Text, ProgressView, EmptyView>*/(
-            arr: arr,
+        InfiniteScrollView(
+            arr: $arr,
             options: options,
             onLoadingChanged: onLoadingChanged,
             cellView: CellView,
@@ -23,18 +23,19 @@ struct CustomizedImplementation: View {
         )
     }
     
-    private var options: Options<String> {
+    private var options: Options<Person> {
         .init(
             orientation: .horizontal,
             countPerPage: 2,
             paginationOptions: .init(
-                concatMode: .auto, //.auto for automatically adding pages to the array instead of passing the full array everytime.
+                concatMode: .manual, // manual for manually appending items to the array and returning the whole array
                 onPageLoad: {
                     // Simulate an http request
                     try? await Task.sleep(nanoseconds: 5 * 1_000_000_000)
                     
+                    var arr = await arr
                     for i in arr.count...arr.count + 10 {
-                        arr.append("Cell #\(i)")
+                        arr.append(.init(name: "Cell #\(i)"))
                     }
                     return arr
                 },
@@ -42,8 +43,9 @@ struct CustomizedImplementation: View {
                     // Simulate an http request
                     try? await Task.sleep(nanoseconds: 5 * 1_000_000_000)
                     
+                    var arr = await arr
                     for i in 0...25 {
-                        arr.append("Cell #\(i)")
+                        arr.append(.init(name: "Cell #\(i)"))
                     }
                     return arr
                 }
@@ -59,20 +61,25 @@ struct CustomizedImplementation: View {
         }
     }
     
-    @ViewBuilder func CellView(_ item: String) -> some View {
-        Text(item)
+	@ViewBuilder func CellView(_ item: Person) -> some View {
+		Text(item.name)
     }
     
-    @ViewBuilder func LastCellView() -> some View {
+    @ViewBuilder private func LastCellView() -> some View {
         ProgressView()
             .padding()
     }
     
-    @ViewBuilder func EmptyArrView() -> some View {
+    @ViewBuilder private func EmptyArrView() -> some View {
         Text("No items to display...")
     }
 }
 
 #Preview {
     CustomizedImplementation()
+}
+
+struct Person: Identifiable, Hashable {
+    let name: String
+    let id: UUID = UUID()
 }

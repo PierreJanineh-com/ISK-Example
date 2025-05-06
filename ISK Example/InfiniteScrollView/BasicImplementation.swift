@@ -9,11 +9,11 @@ import SwiftUI
 import InfinityScrollKit
 
 struct BasicImplementation: View {
-    let arr: [String]
+    @State var arr: [String] = []
     
     var body: some View {
-        InfiniteScrollView/*<String, Text, EmptyView, EmptyView>*/(
-            arr: arr,
+        InfiniteScrollView(
+            arr: $arr,
             options: .init(countPerPage: 5)
         ) { item in
             Text(item)
@@ -25,4 +25,11 @@ struct BasicImplementation: View {
 
 #Preview {
     BasicImplementation(arr: [])
+}
+
+// Objects passed to the arr property need to conform to Identifiable
+extension String: @retroactive Identifiable {
+	public var id: String {
+		self
+	}
 }
